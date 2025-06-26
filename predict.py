@@ -12,19 +12,19 @@ def load_sample():
     We'll align column order after loading expected column names.
     """
     sample = {
-    'Age': 32,
+    'Age': 37,
     'Gender_female': 1,
     'Gender_male': 0,
     'Gender_other': 0,
     
-    'benefits_Yes': 0,              # No mental health benefits
-    'care_options_Yes': 0,          # No care options provided
+    'benefits_Yes': 1,              # No mental health benefits
+    'care_options_Yes': 2,          # No care options provided
     'wellness_program_Yes': 0,      # No wellness program
     'remote_work_Yes': 0,           # Cannot work remotely
     'tech_company_Yes': 1,          # Works in tech (often high-stress)
     
-    'seek_help_Yes': 0,             # Not encouraged to seek help
-    'anonymity_Yes': 0,             # Anonymity not protected
+    'seek_help_Yes': 1,             # Not encouraged to seek help
+    'anonymity_Yes': 1,             # Anonymity not protected
     'leave_Very difficult': 1,      # Hard to take mental health leave
     'mental_health_consequence_Yes': 1,  # Believes there will be consequences
     'phys_health_consequence_Yes': 0,    # Physical health not perceived as risky
@@ -85,7 +85,7 @@ def main():
     prediction = model.predict(new_data)[0]
     label = "Needs treatment" if prediction == 1 else "No treatment needed"
 
-    print(f"\n🔮 Prediction: {label} (class: {prediction})")
+    print(f"\n Prediction: {label} (class: {prediction})")
 
 if __name__ == "__main__":
     main()
