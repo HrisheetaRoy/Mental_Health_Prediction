@@ -8,11 +8,11 @@ def load_model(path="outputs/models/random_forest_model.pkl"):
 def load_sample():
     """
     Define a new sample with some default values.
-    This must match the structure of the encoded training data.
+    This must match  the structure of the encoded training data.
     We'll align column order after loading expected column names.
     """
     sample = {
-    'Age': 37,
+    'Age': 38,
     'Gender_female': 1,
     'Gender_male': 0,
     'Gender_other': 0,
